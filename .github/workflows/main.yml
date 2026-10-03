@@ -13,7 +13,7 @@ jobs:
 
       - name: Descompactar projeto
         run: |
-          unzip -o construlife_github_apk_v1.zip -d projeto
+          unzip -o construlife_github_apk_v2.zip -d projeto
           cp -R projeto/* .
           cp -R projeto/.[!.]* . 2>/dev/null || true
           rm -rf projeto
