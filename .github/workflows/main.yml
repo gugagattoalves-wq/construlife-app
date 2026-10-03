@@ -17,6 +17,10 @@ jobs:
           cp -R projeto/* .
           cp -R projeto/.[!.]* . 2>/dev/null || true
           rm -rf projeto
+          
+      - name: Corrigir configuração Java
+        run: |
+          find . -name "*.gradle" -type f -exec sed -i '/options.release/d' {} \;
 
       - name: Configurar Java
         uses: actions/setup-java@v4
